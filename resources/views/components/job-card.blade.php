@@ -10,7 +10,7 @@
         <p class="mt-auto">{{ $job->schedule }} - from {{ $job->salary }}</p>
     </div>
     <div class="flex justify-between mt-auto">
-        <div class="self-end flex gap-2">
+        <div class="self-end flex flex-wrap gap-2">
             @foreach ($job->tags as $tag)
                 <x-tag :$tag size="small" />
             @endforeach

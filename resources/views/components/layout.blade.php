@@ -15,7 +15,7 @@
             <x-navbar />
         </header>
 
-        <main class="sm:px-10 mt-10 max-w-screen-xl mx-auto">
+        <main class="sm:px-10 mt-10 max-w-6xl mx-auto">
             {{ $slot }}
         </main>
         <footer class="mt-10">
