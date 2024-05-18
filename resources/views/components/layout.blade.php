@@ -26,7 +26,12 @@
                         <li><a href="#">Companies</a></li>
                     </ul>
                 </div>
-                <div><a href="#">Post a job</a></div>
+                <div>
+                    <a href="#"
+                        class="inline-flex items-center gap-x-2 py-1 px-3 border border-transparent hover:border-blue-800 rounded transition-all duration-200">
+                        <span class="w-3 h-3 bg-blue-700"></span>Post a job
+                    </a>
+                </div>
             </nav>
         </div>
 
