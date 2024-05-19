@@ -1,3 +1,11 @@
-@props(['width' => 90])
-<img src="https://picsum.photos/id/{{ rand(0, 400) }}/{{ $width }}" alt="employer logo"
-    class="rounded-md self-start">
+@props(['employer', 'width' => 90])
+
+@php
+    $asset = asset('storage/' . $employer->logo);
+    if (str_starts_with($employer->logo, 'https://picsum.photos/')) {
+        $asset = asset($employer->logo);
+    }
+@endphp
+
+<img src="{{ $asset }}" alt="employer logo" class="rounded-lg self-start " width="{{ $width }}"
+    loading="lazy" />

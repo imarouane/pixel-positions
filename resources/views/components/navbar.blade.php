@@ -15,7 +15,7 @@
     <div>
         @auth
             <div class="flex gap-2 items-center justify-center">
-                <a href="/jobs/create"
+                <a href="/jobs"
                     class="inline-flex items-center gap-x-2 py-1 px-3 border border-transparent hover:border-blue-800 rounded transition-all duration-200">
                     <span class="w-3 h-3 bg-blue-700"></span>Post a job
                 </a>

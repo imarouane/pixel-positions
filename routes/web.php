@@ -11,6 +11,10 @@ Route::get('/', [JobController::class, 'index'])->name('home');
 Route::get('/search', SearchController::class);
 Route::get('/tags/{tag:name}', TagController::class);
 
+Route::get('/jobs', [JobController::class, 'create'])->name('create.jobs')->middleware('auth');
+
+Route::post('/jobs', [JobController::class, 'store'])->name('store.jobs')->middleware('auth');
+
 Route::middleware('guest')->group(function () {
     Route::get('/register', [RegisterUserController::class, 'create'])->name('register');
     Route::post('/register', [RegisterUserController::class, 'store'])->name('register.store');

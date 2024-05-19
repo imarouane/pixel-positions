@@ -5,7 +5,9 @@
     </h3>
     <div>
         <h3 class="text-2xl font-semibold group-hover:text-blue-800 mb-5 transition-all duration-200">
-            {{ $job->title }}
+            <a href="{{ $job->url }}" target="_blank">
+                {{ $job->title }}
+            </a>
         </h3>
         <p class="mt-auto">{{ $job->schedule }} - from {{ $job->salary }}</p>
     </div>
@@ -16,6 +18,8 @@
             @endforeach
 
         </div>
-        <x-employer-logo width="42" />
+        <div>
+            <x-employer-logo width="42" :employer="$job->employer" />
+        </div>
     </div>
 </x-panel>

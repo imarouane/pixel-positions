@@ -1,14 +1,16 @@
 @props(['job'])
 <x-panel class="min-h-44 p-6">
     <div>
-        <x-employer-logo class="self-start" />
+        <x-employer-logo :employer="$job->employer" class="self-start" />
     </div>
     <div class="flex-1 flex flex-col gap-y-2">
         <a href="#" class="text-sm text-gray-400">
             {{ $job->employer->name }}
         </a>
         <h3 class="text-2xl font-semibold group-hover:text-blue-800 mb-5 transition-all duration-200">
-            {{ $job->title }}
+            <a href="{{ $job->url }}" target="_blank">
+                {{ $job->title }}
+            </a>
         </h3>
         <p class="mt-auto text-sm text-gray-400">
             {{ $job->schedule }} - from {{ $job->salary }}

@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Employer>
@@ -18,8 +19,8 @@ class EmployerFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->name(),
-            'logo' => fake()->imageUrl(),
+            'name' => fake()->company(),
+            'logo' => "https://picsum.photos/id/" . rand(1, 500) . "/100",
             'user_id' => User::factory()
         ];
     }
